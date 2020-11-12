@@ -2,5 +2,8 @@ def main():
 	print("main program")
 
 
-if __main__ == main:
+def qsort(list):
+	for i in range(0,list.size()):
+		print(list[i])
+if __name__ == "__main__":
 	main()
