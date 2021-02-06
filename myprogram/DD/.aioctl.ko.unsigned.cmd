@@ -1,0 +1,1 @@
+cmd_/users/home101/aloktiwa/myprogram/DD/aioctl.ko.unsigned := ld -r -m elf_x86_64 -T /usr/src/kernels/2.6.32-279.22.1.el6.x86_64/scripts/module-common.lds --build-id -o /users/home101/aloktiwa/myprogram/DD/aioctl.ko.unsigned /users/home101/aloktiwa/myprogram/DD/aioctl.o /users/home101/aloktiwa/myprogram/DD/aioctl.mod.o 

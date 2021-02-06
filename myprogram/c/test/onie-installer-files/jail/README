@@ -1,0 +1,15 @@
+mkdir -p /var/tmp/chroot/var/lib/rpm
+rpm --rebuilddb --root=/var/tmp/chroot
+rpm -i --root=/var/tmp/chroot --nodeps ~/centos-release-7-0.1406.el7.centos.2.3.x86_64.rpm
+yum --nogpgcheck --installroot=/var/tmp/chroot install -y rpm
+
+Cleanup:
+
+localedef --list-archive | grep -v -i ^en | xargs localedef --delete-from-archive
+build-locale-archive
+
+rm -fR /var/cache /usr/share /usr/local/share
+
+
+
+

@@ -1,0 +1,45 @@
+# strace ./a.out
+execve("./a.out", ["./a.out"], [/* 40 vars */]) = 0
+brk(0)                                  = 0x948000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f56b0fcd000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/x86_64/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/tls/x86_64", 0x7fff68410d60) = -1 ENOENT (No such file or directory)
+open("/usr/lib/tls/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/tls", 0x7fff68410d60)    = -1 ENOENT (No such file or directory)
+open("/usr/lib/x86_64/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/lib/x86_64", 0x7fff68410d60) = -1 ENOENT (No such file or directory)
+open("/usr/lib/libc.so.6", O_RDONLY)    = -1 ENOENT (No such file or directory)
+stat("/usr/lib", {st_mode=S_IFDIR|0555, st_size=20480, ...}) = 0
+open("/usr/local/lib/tls/x86_64/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls/x86_64", 0x7fff68410d60) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/tls/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/tls", 0x7fff68410d60) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/x86_64/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib/x86_64", 0x7fff68410d60) = -1 ENOENT (No such file or directory)
+open("/usr/local/lib/libc.so.6", O_RDONLY) = -1 ENOENT (No such file or directory)
+stat("/usr/local/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+open("/etc/ld.so.cache", O_RDONLY)      = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=129311, ...}) = 0
+mmap(NULL, 129311, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f56b0fad000
+close(3)                                = 0
+open("/lib64/libc.so.6", O_RDONLY)      = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\360\355!\3330\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1979000, ...}) = 0
+mmap(0x30db200000, 3803304, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x30db200000
+mprotect(0x30db397000, 2097152, PROT_NONE) = 0
+mmap(0x30db597000, 20480, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x197000) = 0x30db597000
+mmap(0x30db59c000, 18600, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x30db59c000
+close(3)                                = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f56b0fac000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f56b0fab000
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f56b0faa000
+arch_prctl(ARCH_SET_FS, 0x7f56b0fab700) = 0
+mprotect(0x30db597000, 16384, PROT_READ) = 0
+mprotect(0x30dac1f000, 4096, PROT_READ) = 0
+munmap(0x7f56b0fad000, 129311)          = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 102), ...}) = 0
+mmap(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f56b0fcc000
+write(1, "Hello world\n", 12Hello world
+)           = 12
+exit_group(12)  
